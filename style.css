@@ -394,6 +394,45 @@ justify-content: right;
 .Menu_mobile{
     display: none;
 }
+.mobile-sidebar{
+    position: fixed;
+    top: 0;
+    right: -250px;
+    width: 250px;
+    height: 100%;
+    background-color: #111;
+    color: white;
+    transition: left 0.3s ease;
+    z-index: 1001;
+    padding: 60px 20px;
+}
+.mobile-sidebar ul{
+    list-style: none;
+    padding: 0;
+}
+.mobile-sidebar li a{
+    color: white;
+    text-decoration: none;
+    font-size: 1.8em;
+    display: block;
+    padding: 15px 0;
+}
+.mobile-sidebar.open{
+    right: 0;
+}
+.overlay{
+    position: fixed;
+    top: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: rgba(0, 0, 0, 0.4);
+    display: none;
+    z-index: 1000;
+}
+.overlay.show{
+    display: block;
+}
 
 @media(max-width: 1200px){
 
@@ -688,6 +727,7 @@ transition: background-color 0.3s ease;
         margin: 10px 20px;
         width: 60px; 
     }
+    
 }    
 @media(max-width: 480px){
     .product-title{
@@ -711,27 +751,24 @@ transition: background-color 0.3s ease;
         margin-bottom: 10px;
     }
     .footer-info p{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     
     .footer-captcha {
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .footer-captcha a{
         font-size: 1em;
     }
-    .footer-services{
-        margin: 10px 20px;
-    }
     .footer-services ul li a{
-        font-size: 1.4em;
+        font-size: 1.2em;
         color: white;
     }
     .footer-info-contacts p{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
     .footer-payment-info a{
-        font-size: 1.4em;
+        font-size: 1.2em;
     }
 }
 @media(max-width: 320px){

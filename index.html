@@ -38,6 +38,16 @@
             </button>    
         </div>
     </header>
+    <nav class="mobile-sidebar" id="mobileSidebar">
+        <ul>
+            <li><a href="#">Каталог</a></li>
+            <li><a href="#">О компании</a></li>
+            <li><a href="#">Контакты</a></li>
+            <li><a href="#">Доставка и оплата</a></li>
+            <li><a href="#">Гарантия и возврат</a></li>
+        </ul>
+    </nav>
+    <div class="overlay" id="overlay"></div>
 
     <main class="content">
         <div class="card sale">
@@ -188,6 +198,22 @@
 
             </div>
     </footer>
-      
+   <script>
+    document.addEventListener("DOMContentLoaded",function(){
+        const toggleBtn = document.querySelector(".menu-toggle");
+        const sideBar = document.getElementById("mobileSidebar");
+        const overlay = document.getElementById("overlay");
+
+        toggleBtn.addEventListener("click", ()=>{
+            sideBar.classList.toggle("open");
+            overlay.classList.toggle("show");
+        });
+
+        overlay.addEventListener("click", ()=>{
+            sideBar.classList.remove("open");
+            overlay.classList.remove("show");
+        });
+    });
+   </script>   
 </body>
 </html>
